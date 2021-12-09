@@ -1,4 +1,6 @@
-Repository structure:
+# F1D27573CCE8EEC6
+
+### Repository structure:
 
 | File Name | Description |
 | --- | --- |
@@ -10,9 +12,12 @@ Repository structure:
 | README.md | This file. |
 
 The distributed password cracker system is built in python 3.6.5.
+
 The web interface is built using the Express framework for Node.js.
 
-Instructions to install:
+# Instructions:
+
+### Instructions to install:
 1. Use rspec.xml to request resources from GENI.
 	* Use any InstaGENI test site.
 	* Use the Auto IP function.
@@ -36,7 +41,7 @@ Instructions to install:
 		1. On the master node, run `sudo tc qdisc add dev ${if} root netem delay ${d}ms loss ${p}% corrupt ${c}%`, where ${if} is the name of the interface that connects it to the worker node, ${d} is the chosen delay in milliseconds, ${p} is the chosen packet loss rate in percentage, and ${c} is the chosen corruption rate in percentage.
 		* The delay or loss or corrupt parameter and the parameter that follows it can be omitted to add no additional delay or loss or corruption to the network environment.
 
-Instructions to start up system:
+### Instructions to start up system:
 1. On the master node, run:
 	1. `cd MasterCommunicator`
 	1. `python3 Master.py`.
@@ -47,7 +52,7 @@ Instructions to start up system:
 * You can add worker nodes on demand by running the `python3 Worker.py` command on them.
 * The worker nodes print the number of hashes checked so far and an estimate of the hash rate, unless it is not currently hashing, in which case it prints "sleeping" instead of the estimate of the hash rate.
 
-Instructions to use the web interface:
+### Instructions to use the web interface:
 1. Do the instructions to install.
 1. Do the instructions to start up system.
 1. ssh into the the master node and then run:
@@ -62,7 +67,7 @@ Instructions to use the web interface:
 	* After hitting submit, the web page should show that you submitted at least one hash and it should show you the hashes submitted.
 		* If after the equals sign it says "Still cracking" then you can refresh the page to check on its progress.
 
-Instructions to run test:
+### Instructions to run test:
 1. Do the instructions to install.
 1. Do the instructions to start up system.
 1. ssh into master node and then run:
