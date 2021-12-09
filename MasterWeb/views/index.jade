@@ -2,6 +2,7 @@ extends layout
 
 block content
   p Do you want to try cracking an MD5 hash?
+  p You should only submit hashes of strings of length 5 of all uppercase English characters.
   form(name="MD5 Hash to Crack", method="post", action="/")
     div.input
       span.label MD5 Hash to Crack:
