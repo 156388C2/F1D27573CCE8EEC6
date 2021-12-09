@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  p Do you want to try cracking an MD5 hash?
+  form(name="MD5 Hash to Crack", method="post", action="/")
+    div.input
+      span.label MD5 Hash to Crack:
+      input(type="text", name="toCrack")
+    div.actions
+      input(type="submit", value="Submit")
+  p You submitted #{resultsList.length} hashes.
+  p These are the results:
+  ul
+    each item in resultsList
+      li=item.response
